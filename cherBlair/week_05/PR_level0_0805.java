@@ -18,9 +18,9 @@ public class PR_level0_0805 {
             int s2L = s2.length;
 
             if (1 <= s1L && s1L <= 100 && 1 <= s2L && s2L <= 100) {
-                for (int i = 0; i < s1L; i ++) {
-                    for (int j = 0; j < s2L; j ++) {
-                        if (s1[i].equals(s2[j])) {
+                for (String s : s1) {
+                    for (String value : s2) {
+                        if (s.equals(value)) {
                             answer++;
                         }
                     }
