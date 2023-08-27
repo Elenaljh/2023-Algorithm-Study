@@ -1,6 +1,6 @@
 package week_08;
 
-public class PR_level0_0821 {
+public class PR0821 {
 
     // 💛옷가게 할인받기
     // 머쓱이네 옷가게는 10만 원 이상 사면 5%, 30만 원 이상 사면 10%, 50만 원 이상 사면 20%를 할인해줍니다.

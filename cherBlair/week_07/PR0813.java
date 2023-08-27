@@ -1,6 +1,6 @@
 package week_07;
 
-public class PR_level0_0813 {
+public class PR0813 {
 
     // ◼︎ 순서 쌍의 개수
     // 순서쌍이란 두 개의 숫자를 순서를 정하여 짝지어 나타낸 쌍으로 (a, b)로 표기합니다.

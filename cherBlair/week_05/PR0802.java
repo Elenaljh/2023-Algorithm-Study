@@ -1,6 +1,6 @@
 package week_05;
 
-public class PR_level0_0802 {
+public class PR0802 {
 
     // 편지
     // 머쓱이는 할머니께 생신 축하 편지를 쓰려고 합니다.

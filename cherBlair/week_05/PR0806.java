@@ -2,7 +2,7 @@ package week_05;
 
 import java.util.regex.Pattern;
 
-public class PR_level0_0806 {
+public class PR0806 {
 
     // ◼︎ 문자열 안에 문자열
     // 문자열 str1, str2가 매개변수로 주어집니다. str1 안에 str2가 있다면 1을 없다면 2를 return하도록 solution 함수를 완성해주세요.

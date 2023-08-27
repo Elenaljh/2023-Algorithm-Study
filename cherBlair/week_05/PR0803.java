@@ -1,6 +1,6 @@
 package week_05;
 import java.util.Arrays;
-public class PR_level0_0803 {
+public class PR0803 {
 
     // ◼︎ 배열 자르기
     // 정수 배열 numbers와 정수 num1, num2가 매개변수로 주어질 때,

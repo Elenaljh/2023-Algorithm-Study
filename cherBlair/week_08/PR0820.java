@@ -2,7 +2,7 @@ package week_08;
 
 import java.util.Arrays;
 
-public class PR_level0_0820 {
+public class PR0820 {
 
     // ◼︎ 삼각형의 완성조건 (1)
     // 문제 설명

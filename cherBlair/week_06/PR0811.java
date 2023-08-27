@@ -1,6 +1,6 @@
 package week_06;
 
-public class PR_level0_0811 {
+public class PR0811 {
 
     // ◼︎ 피자 나눠 먹기 (3)
     // 머쓱이네 피자가게는 피자를 두 조각에서 열 조각까지 원하는 조각 수로 잘라줍니다.
