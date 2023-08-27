@@ -1,6 +1,6 @@
 package week_07;
 
-public class PR_level0_0819 {
+public class PR0819 {
 
     // ◼ ︎머쓱이보다 키 큰 사람
     // 머쓱이는 학교에서 키 순으로 줄을 설 때 몇 번째로 서야 하는지 궁금해졌습니다.

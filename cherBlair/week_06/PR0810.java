@@ -1,6 +1,6 @@
 package week_06;
 
-public class PR_level0_0810 {
+public class PR0810 {
 
     // ◼︎ 배열 뒤집기
     // 정수가 들어 있는 배열 num_list가 매개변수로 주어집니다.

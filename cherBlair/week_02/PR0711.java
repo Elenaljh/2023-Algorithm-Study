@@ -1,6 +1,6 @@
 package week_02;
 
-public class PR_level0_0711 {
+public class PR0711 {
 
     // 두 수의 곱
 //    class Solution {

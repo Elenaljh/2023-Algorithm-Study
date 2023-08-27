@@ -1,6 +1,6 @@
 package week_08;
 
-public class PR_level0_0826 {
+public class PR0826 {
 
     // 💛모음 제거
 

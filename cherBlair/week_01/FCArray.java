@@ -1,4 +1,4 @@
-public class FC_Array {
+public class FCArray {
     public static void main(String[] args) {
         String dataset[] = {
                 "Braund, Mr. Owen Harris",

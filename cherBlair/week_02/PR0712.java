@@ -2,7 +2,7 @@ package week_02;
 
 import java.util.Arrays;
 
-public class PR_level0_0712 {
+public class PR0712 {
 
     // 몫 구하기
 //    class Solution {

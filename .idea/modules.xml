@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2023-Algorithm-Study.iml" filepath="$PROJECT_DIR$/2023-Algorithm-Study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Elenaljh/Elenaljh.iml" filepath="$PROJECT_DIR$/Elenaljh/Elenaljh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JuSeong1130/JuSeong1130.iml" filepath="$PROJECT_DIR$/JuSeong1130/JuSeong1130.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cherBlair/cherBlair.iml" filepath="$PROJECT_DIR$/cherBlair/cherBlair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itchoi/itchoi.iml" filepath="$PROJECT_DIR$/itchoi/itchoi.iml" />
+    </modules>
+  </component>
+</project>
