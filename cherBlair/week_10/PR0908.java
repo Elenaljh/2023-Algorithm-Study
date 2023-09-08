@@ -12,21 +12,21 @@ public class PR0908 {
 
     class Solution {
         public String solution(String my_string) {
-            String answer = "";
+            StringBuilder answer = new StringBuilder();
 
             char[] arry = my_string.toCharArray();
 
             String temp ="";
-            for(int i = 0; i <arry.length; i++) {
-                if( arry[i] >= 97 && arry[i] <= 122 ) {
-                    temp = arry[i] + "";
-                    answer += temp.toUpperCase();
-                } else if( arry[i] >=65 && arry[i] <= 90){
-                    temp = arry[i] + "";
-                    answer += temp.toLowerCase();
+            for (char c : arry) {
+                if (c >= 97 && c <= 122) {
+                    temp = String.valueOf(c);
+                    answer.append(temp.toUpperCase());
+                } else if (c >= 65 && c <= 90) {
+                    temp = String.valueOf(c);
+                    answer.append(temp.toLowerCase());
                 }
             }
-            return answer;
+            return answer.toString();
         }
     }
 
