@@ -53,7 +53,7 @@ public class Main {
                     if (j % 2 == 0) {
                         result[i][j] = element != 0 ? 0 : 1;
                     } else {
-                        result[i][j] = element != 0 ? 1: 0;
+                        result[i][j] = element != 0 ? 1 : 0;
                     }
                 }
             }
@@ -74,7 +74,7 @@ public class Main {
                     }
                 } else {
                     if (j % 2 == 0) {
-                        result[i][j] = element != 0 ? 1: 0;
+                        result[i][j] = element != 0 ? 1 : 0;
                     } else {
                         result[i][j] = element != 0 ? 0 : 1;
                     }
