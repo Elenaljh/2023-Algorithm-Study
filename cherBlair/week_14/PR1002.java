@@ -17,7 +17,7 @@ public class PR1002 {
             String numS = Integer.toString(num);
             String kS = Integer.toString(k);
 
-            if(numS.indexOf(kS) == -1) {
+            if(!numS.contains(kS)) {
                 return -1;
             } else {
                 return numS.indexOf(kS) +1;
