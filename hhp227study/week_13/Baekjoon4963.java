@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Main {
     private static void bfs(int startI, int startJ, int[][] array) {
-        Queue<int[]> queue = new LinkedList<>(List.of(new int[]{startI, startJ}));
+        Queue<int[]> queue = new LinkedList<>(List.of(new int[] {startI, startJ}));
 
         while (!queue.isEmpty()) {
             int[] current = queue.poll();
@@ -22,7 +22,7 @@ public class Main {
                 if (array[nextI][nextJ] == 1) {
                     array[nextI][nextJ] = 2;
 
-                    queue.offer(new int[]{nextI, nextJ});
+                    queue.offer(new int[] {nextI, nextJ});
                 }
             }
         }
