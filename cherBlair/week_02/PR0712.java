@@ -96,7 +96,7 @@ public class PR0712 {
 //        }
 //    }
 
-    // 배열의 평균값 - 참고 ⭐️stream 활용
+    // 배열의 평균값 - 참고 ⭐️stream 활용 [ HP ]
     class Solution {
         public double solution(int[] numbers) {
             return Arrays.stream(numbers).average().orElse(0);

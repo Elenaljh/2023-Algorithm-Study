@@ -31,7 +31,7 @@ public class PR1003 {
     //    }
     //}
 
-    // 다른 풀이 2
+    // 다른 풀이 2 [ HP ]
     // import java.util.*;
     //import java.util.stream.Collectors;
     //

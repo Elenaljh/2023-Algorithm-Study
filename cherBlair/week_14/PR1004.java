@@ -39,7 +39,7 @@ public class PR1004 {
     }
 
 
-    // 다른 풀이
+    // 다른 풀이 [ HP ]
     // import java.util.stream.IntStream;
     //
     //class Solution {

@@ -32,7 +32,7 @@ public class PR0904 {
     }
 
 
-    // 참고 코드
+    // 참고 코드 [ HP ]
     // import java.util.Arrays;
     //import java.util.stream.Collectors;
     //

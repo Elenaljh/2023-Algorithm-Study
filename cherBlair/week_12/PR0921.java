@@ -31,7 +31,7 @@ public class PR0921 {
         }
     }
 
-    // 다른 풀이 참고 - stream
+    // 다른 풀이 참고 - stream [ HP ]
     // import java.util.stream.Collectors;
     //
     //class Solution {

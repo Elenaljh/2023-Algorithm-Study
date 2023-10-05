@@ -41,7 +41,7 @@ public class PR0906 {
     //    }
     //}
 
-    // 참고코드2
+    // 참고코드2 [ HP ]
     //import java.util.stream.Collectors;
     //import java.util.stream.IntStream;
     //

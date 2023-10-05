@@ -40,7 +40,7 @@ public class PR0925 {
     }
 
 
-    // 다른 풀이 참고 (stream)
+    // 다른 풀이 참고 (stream) [ HP ]
     // import java.util.Arrays;
     //import java.util.List;
     //import java.util.stream.Collectors;

@@ -25,7 +25,7 @@ public class PR0831 {
     }
 
 
-    // 참고 코드
+    // 참고 코드 [ HP ]
     // import java.util.stream.IntStream;
     //
     //class Solution {

@@ -30,7 +30,7 @@ public class PR0808 {
 
 
     // 참고
-    // stream 사용 코드
+    // stream 사용 코드 - [ HP ]
 
 //    import java.util.stream.IntStream;
 //    import java.util.Arrays;
