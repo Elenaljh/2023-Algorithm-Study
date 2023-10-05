@@ -35,7 +35,7 @@ public class PR0916 {
         }
     }
 
-    // 코드 참고
+    // 코드 참고 [ HP ]
     // import java.util.*;
     //import java.util.stream.Collectors;
     //

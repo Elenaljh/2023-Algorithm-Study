@@ -30,7 +30,7 @@ public class PR0908 {
         }
     }
 
-    // 참고 코드
+    // 참고 코드 [ HP ]
     // import java.util.stream.Collectors;
     //
     //class Solution {

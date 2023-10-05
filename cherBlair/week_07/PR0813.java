@@ -23,7 +23,7 @@ public class PR0813 {
     }
 
     // 참고 답안
-    // intStream 사용
+    // intStream 사용 [ HP ]
 
 //    import java.util.stream.IntStream;
 //

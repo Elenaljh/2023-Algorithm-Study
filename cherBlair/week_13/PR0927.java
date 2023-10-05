@@ -33,7 +33,7 @@ public class PR0927 {
         }
     }
 
-    // 다른 풀이 참고
+    // 다른 풀이 참고 [ HP ]
     // import java.util.stream.IntStream;
     // import java.util.Arrays;
     //
