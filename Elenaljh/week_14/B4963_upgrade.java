@@ -3,7 +3,7 @@ import java.io.*;
 
 
 // ???? 답이 안나옴
-public class B4963 {
+public class B4963_upgrade {
     static String[] strs; //입력값 임시로 저장할 배열
     static int w, h = 0;
     static int[] dx = {-1, 1, 0, 0, -1, -1, 1, 1};
@@ -15,11 +15,16 @@ public class B4963 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        strs = br.readLine().split(" ");
-        w = Integer.parseInt(strs[0]);
-        h = Integer.parseInt(strs[1]);
 
-        while (w != 0 && h != 0) { // 0 0이 입력되면 입력이 끝남
+        while (true) { // 0 0이 입력되면 입력이 끝남
+            strs = br.readLine().split(" ");
+            w = Integer.parseInt(strs[0]);
+            h = Integer.parseInt(strs[1]);
+
+            if (w == 0 && h == 0) {
+                break;
+            }
+
             map = new int[h][w];
             visit = new boolean[h][w];
             count = 0;
@@ -42,11 +47,7 @@ public class B4963 {
                 }
             }
 
-            System.out.print("\n" + count);
-
-            strs = br.readLine().split(" ");
-            w = Integer.parseInt(strs[0]);
-            h = Integer.parseInt(strs[1]);
+            System.out.println(count);
         }
 
     }
