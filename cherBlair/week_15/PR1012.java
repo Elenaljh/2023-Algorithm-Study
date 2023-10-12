@@ -21,11 +21,11 @@ public class PR1012 {
 
             char[] bArray = before.toCharArray();
             Arrays.sort(bArray);
-            String bSortString = new StringBuilder(new String(bArray)).toString();
+            String bSortString = new String(bArray);
 
             char[] aArray = after.toCharArray();
             Arrays.sort(aArray);
-            String aSortString = new StringBuilder(new String(aArray)).toString();
+            String aSortString = new String(aArray);
 
             if (bSortString.equals(aSortString)) {
                 answer = 1;
