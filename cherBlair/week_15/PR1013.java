@@ -1,8 +1,5 @@
 package week_15;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class PR1013 {
 
     // 💛k의 개수
@@ -15,7 +12,7 @@ public class PR1013 {
     //  1 ≤ i < j ≤ 100,000
     //  0 ≤ k ≤ 9
 
-    class Solution {
+    static class Solution {
         public int solution(int i, int j, int k) {
             int answer = 0;
             String numString = "";
@@ -23,7 +20,7 @@ public class PR1013 {
             for (int num = i; num <= j; num++) {
                 numString = numString.concat(String.valueOf(num));
             }
-            List<String> numList = Arrays.asList(numString.split(""));
+            String[] numList = numString.split("");
 
             for (String ks : numList) {
                 if (ks.equals(String.valueOf(k))) {
