@@ -16,13 +16,13 @@ public class PR1013_02 {
     //  000123과 같이 0이 선행하는 경우는 없습니다.
     //  문자열에 자연수가 없는 경우 0을 return 해주세요.
 
-    class Solution {
+    static class Solution {
         public int solution(String my_string) {
             int answer = 0;
             String[] split = my_string.split("[a-zA-z]+");
-            for(int i=0; i < split.length; i++) {
-                if(split[i].matches("[0-9]+")) {
-                    answer += Integer.parseInt(split[i]);
+            for (String s : split) {
+                if (s.matches("[0-9]+")) {
+                    answer += Integer.parseInt(s);
                 }
             }
             return answer;
