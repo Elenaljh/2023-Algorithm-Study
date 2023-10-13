@@ -23,7 +23,7 @@ public class PR1013 {
             for (int num = i; num <= j; num++) {
                 numString = numString.concat(String.valueOf(num));
             }
-            List<String> numList = Arrays.asList(numString.split(""));
+            String[] numList = numString.split("");
 
             for (String ks : numList) {
                 if (ks.equals(String.valueOf(k))) {
