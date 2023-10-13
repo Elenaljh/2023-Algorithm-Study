@@ -1,6 +1,6 @@
 package week_15;
 
-public class PR1013 {
+public class PR1013_01 {
 
     // 💛k의 개수
     // https://school.programmers.co.kr/learn/courses/30/lessons/120887
