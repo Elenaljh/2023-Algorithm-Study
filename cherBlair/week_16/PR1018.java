@@ -19,13 +19,13 @@ public class PR1018 {
             int diff = 0;
             int min = Integer.MAX_VALUE;
 
-            for (int i = 0; i < array.length; i++) {
-                diff = Math.abs(n - array[i]);
+            for (int j : array) {
+                diff = Math.abs(n - j);
                 if (diff < min) {
                     min = diff;
-                    answer = array[i];
-                } else if (diff == min && array[i] < answer) {
-                    answer = array[i];
+                    answer = j;
+                } else if (diff == min && j < answer) {
+                    answer = j;
                 }
             }
             return answer;
