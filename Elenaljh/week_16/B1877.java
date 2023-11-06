@@ -35,6 +35,9 @@ public class B1877 {
         /**
          * a1+...+an >= (a1*..*an)^(1/n)*n (등호조건: a1=a2=...=an)
          */
+
+        // m의 n 제곱근
+        // m의 소인수 n개
         for (int i = 1; i <= m; i++) {
 
             if (cal == min) {
