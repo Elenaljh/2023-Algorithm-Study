@@ -8,6 +8,12 @@ public class B1629_ver2 {
         long b = Integer.parseInt(st.nextToken());
         long c = Integer.parseInt(st.nextToken());
 
+        long result = multiply(a, b, 0, a) % c;
+        System.out.println(result);
+    }
 
+    public static long multiply(long a, long b, long count, long mul) {
+        if (count == b) return mul;
+        return multiply(a, b, count+1, mul*a);
     }
 }
