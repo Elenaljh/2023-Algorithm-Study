@@ -14,7 +14,7 @@ public class Daily1214 {
     // 주몽
 
     /*
-    ❗️pseudo c
+    ❗️pseudo code
 
     N(재료의 개수), M(갑옷이 되는 번호) 저장하기
     for (N만큼 반복) {
