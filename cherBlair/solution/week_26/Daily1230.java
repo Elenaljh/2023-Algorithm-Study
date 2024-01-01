@@ -7,7 +7,7 @@ public class Daily1230 {
     // 04-1 버블 정렬
 
     // 수 정렬하기 1
-    // https://www.acmicpc.net/problem/2164
+    // https://www.acmicpc.net/problem/2750
 
     /*
         ❗️pseudo code
