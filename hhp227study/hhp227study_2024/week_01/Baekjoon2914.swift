@@ -1,3 +1,8 @@
+/**
+저작권
+https://www.acmicpc.net/problem/2914
+*/
+
 if
     let array = readLine()?.split(separator: " "),
     let a = Int(array[0]),
