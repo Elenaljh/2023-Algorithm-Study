@@ -1,23 +1,37 @@
 import java.io.*;
 import java.util.*;
-
 public class B12873 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
+        Deque<Integer> dq = new ArrayDeque<>();
+        for (int i = 1; i <= n; i++) {
+            dq.addFirst(i);
+        }
+
+        int count = 1;
+        while (dq.size() > 1) {
+            int num = (count * count * count -1) % dq.size();
+            for (int i = 0; i < num; i++) {
+                dq.addFirst(dq.pollLast());
+            }
+            dq.pollLast();
+            count++;
+        }
+        if (dq.size() == 1) {
+            System.out.println(dq.poll());
+        } else {
+            System.out.println("실패");
+        }
+
+        /**
+         * 3 -> 2
+         * 6 -> 6
+         * 10 -> 8
+         */
 
     }
 
-    public static void print(int n) {
-        System.out.println("\"재귀함수가 뭔가요?\"");
-        if (n == 0) {
-            System.out.println("\"재귀함수는 자기 자신을 호출하는 함수라네\"");
-        }
-        if (n > 0) {
-            System.out.println("\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.");
-            System.out.println("마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.");
-            System.out.println("그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"");
-        }
-    }
+
 }
