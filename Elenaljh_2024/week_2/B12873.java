@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 public class B12873 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
@@ -10,9 +9,9 @@ public class B12873 {
             dq.addFirst(i);
         }
 
-        int count = 1;
+        long count = 1;
         while (dq.size() > 1) {
-            int num = (count * count * count -1) % dq.size();
+            long num = (count * count * count -1) % dq.size();
             for (int i = 0; i < num; i++) {
                 dq.addFirst(dq.pollLast());
             }
