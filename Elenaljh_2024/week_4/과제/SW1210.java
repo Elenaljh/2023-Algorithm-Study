@@ -1,3 +1,5 @@
+package 과제;
+
 import java.io.*;
 import java.util.*;
 
