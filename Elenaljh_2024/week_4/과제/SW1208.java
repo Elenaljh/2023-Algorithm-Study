@@ -1,4 +1,4 @@
-/**
+package 과제; /**
  * 과제
  * https://swexpertacademy.com/main/talk/solvingClub/problemView.do?contestProbId=AV139KOaABgCFAYh&solveclubId=AYzyCQd6tDkDFAXz&problemBoxTitle=0130&problemBoxCnt=3&probBoxId=AY1YCnJqvA4DFATh+
  */
