@@ -3,6 +3,10 @@ package BFS;
 import java.io.*;
 import java.util.*;
 
+/*
+유기농 배추
+*/
+
 public class B1012 {
     static int m, n, k;
     static int[] dx = new int[]{1, -1, 0, 0};
