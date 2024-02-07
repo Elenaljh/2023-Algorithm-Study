@@ -21,7 +21,7 @@ public class B1780 {
             }
         }
 
-        paper(0, 0, 9);
+        paper(0, 0, n);
         System.out.println(minus);
         System.out.println(zero);
         System.out.println(plus);
@@ -39,15 +39,11 @@ public class B1780 {
         }
 
         //다르면 종이 9조각으로 나누기
-        paper(r, c, n/3);
-        paper(r+n/3, c, n/3);
-        paper(r+2*n/3, c, n/3);
-        paper(r, c+n/3, n/3);
-        paper(r+n/3, c+n/3, n/3);
-        paper(r+2*n/3, c+n/3, n/3);
-        paper(r, c+2*n/3, n/3);
-        paper(r+n/3, c+2*n/3, n/3);
-        paper(r+2*n/3, c+2*n/3, n/3);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                paper(r+(i*n/3), c+(j*n/3), n/3);
+            }
+        }
     }
 
     static boolean inspect(int r, int c, int n, int flag) {
