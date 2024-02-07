@@ -7,6 +7,10 @@ public class CompleteBinaryTreeTest {
             tree.add((char)(65+i));
         }
 
-        tree.bfs();
+//        tree.bfs();
+        tree.dfsByPreorder();
+        tree.dfsByInorder();
+        tree.dfsByPostorder();
     }
+
 }
