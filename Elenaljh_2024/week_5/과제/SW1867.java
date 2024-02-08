@@ -1,7 +1,6 @@
 package 과제;
 /*
 정사각형 방
-https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AYzyCQd6tDkDFAXz&contestProbId=AV5LtJYKDzsDFAXc&probBoxId=AY2BSpnaCz4DFAXh+&type=PROBLEM&problemBoxTitle=0207&problemBoxCnt=++1+
  */
 import java.util.*;
 import java.io.*;
