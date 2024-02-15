@@ -5,8 +5,8 @@ import java.util.*;
 public class B2839 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        int count = 0;
+        long n = Long.parseLong(br.readLine());
+        long count = 0;
 
         if ((n < 5 && n != 3) || n == 7) {
             System.out.println(-1);
@@ -17,7 +17,7 @@ public class B2839 {
         count += n/5;
 
         //3kg
-        switch (n%5) {
+        switch ((int) (n%5)) {
             case 0:
                 break;
             case 1:
