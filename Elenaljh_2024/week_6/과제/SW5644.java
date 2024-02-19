@@ -11,22 +11,16 @@ public class SW5644 {
     static int AX, AY, BX, BY, sum;
     static Charger[] chargers;
 
-    static class Charger implements Comparable<Charger> {
+    static class Charger {
         public int P; //성능
-        public int persons; //범위 안 사람의 수
         public int C; //충전 범위
         public int x; //행
         public int y; //열
-        public Charger(String x, String y, String c, String p) {
+        public Charger(String y, String x, String c, String p) {
             this.x = Integer.parseInt(x);
             this.y = Integer.parseInt(y);
             this.C = Integer.parseInt(c);
             this.P = Integer.parseInt(p);
-            this.persons = 0;
-        }
-        @Override
-        public int compareTo(Charger o) {
-            return this.P/this.persons - o.P/o.persons;
         }
 
     }
@@ -37,6 +31,7 @@ public class SW5644 {
 
         int T = Integer.parseInt(br.readLine());
         for (int t = 1; t <= T; t++) {
+            AX=1; AY=1; BX=10; BY=10;
             st = new StringTokenizer(br.readLine());
             M = Integer.parseInt(st.nextToken()); //총 이동시간
             A = Integer.parseInt(st.nextToken()); //BC의 개수
@@ -52,7 +47,8 @@ public class SW5644 {
             }
 
             //로직
-            sum = 0; //충전양 더하는 곳
+            sum=0; //충전양 더하는 곳
+            calculate();
             for (int i = 0; i < M; i++) {
                 AX = AX + dx[moveA[i]];
                 AY = AY + dy[moveA[i]];
@@ -70,28 +66,42 @@ public class SW5644 {
         List<Charger> listB = new ArrayList<>();
         for (Charger charger : chargers) {
             if ((Math.abs(charger.x-AX)+Math.abs(charger.y-AY))<=charger.C) {
-                charger.persons = charger.persons + 1;
                 listA.add(charger);
             }
             if ((Math.abs(charger.x-BX)+Math.abs(charger.y-BY))<=charger.C) {
-                charger.persons = charger.persons + 1;
                 listB.add(charger);
             }
         }
+        maxPower(listA, listB);
+    }
 
-        if (!listA.isEmpty()) {
-            Charger A = Collections.max(listA);
-            sum += A.P/A.persons;
-            for (Charger charger : listA) {
-                charger.persons = charger.persons - 1;
-            }
+    static void maxPower(List<Charger> listA, List<Charger> listB) {
+        HashSet<Charger> set = new HashSet<>();
+        if (!listA.isEmpty()) set.addAll(listA);
+        if (!listB.isEmpty()) set.addAll(listB);
+        if (set.isEmpty()) return;
+        Iterator<Charger> itr = set.iterator();
+        if (set.size() == 1) {
+            int currentP = itr.next().P;
+            sum += currentP;
+            return;
         }
-        if (!listB.isEmpty()) {
-            Charger B = Collections.max(listB);
-            sum += B.P/B.persons;
-            for (Charger charger : listB) {
-                charger.persons = charger.persons - 1;
+        if (set.size() > 1) {
+            int max = 0;
+            if (listA.isEmpty()) {
+                listA.add(new Charger("0", "0", "0", "0"));
             }
+            if (listB.isEmpty()) {
+                listB.add(new Charger("0", "0", "0", "0"));
+            }
+            for (int i = 0; i < listA.size(); i++) {
+                for (int j = 0; j < listB.size(); j++) {
+                    if (!listA.get(i).equals(listB.get(j))) {
+                        max = Integer.max(max, listA.get(i).P + listB.get(j).P);
+                    }
+                }
+            }
+            sum += max;
         }
     }
 }

@@ -24,11 +24,12 @@ public class SW5215 {
                 table[i][1] = Integer.parseInt(st.nextToken()); //칼로리
             }
 
+
             //로직 - 비트마스킹 사용
             int max = 0, cal, happiness;
             for (int i = 1; i < (1<<N); i++) {
                 cal = 0; happiness = 0;
-                for (int j = 0; j < N-1; j++) {
+                for (int j = 0; j < N; j++) {
                     if ((i&(1<<j)) != 0) {
                         happiness += table[j][0];
                         cal += table[j][1];
