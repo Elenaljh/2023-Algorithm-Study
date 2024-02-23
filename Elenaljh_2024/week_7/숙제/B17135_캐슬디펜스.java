@@ -4,15 +4,15 @@ package 숙제;
  */
 import java.util.*;
 import java.io.*;
-public class B17135_캐슬디펜스 {
-    static int N, M, D, ATTACK, MAX = 0, ENEMY = 0;
+public class  B17135_캐슬디펜스 {
     static int[][] map;
+    static int N, M, D, ENEMY = 0, COUNT = 0, MAX = 0;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        D = Integer.parseInt(st.nextToken()); //궁수 공격 거리 제한
+        D = Integer.parseInt(st.nextToken());
         map = new int[N+1][M];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -22,63 +22,82 @@ public class B17135_캐슬디펜스 {
             }
         }
 
-        perm(0, 0);
+        game(0, 0);
 
         System.out.println(MAX);
+
     }
 
-    static void perm(int count, int start) {
+    static int calcDistance(int ex, int ey, int ax, int ay) {
+        return Math.abs(ex-ax) + Math.abs(ey-ay);
+    }
+
+    static void game(int count, int start) {
         if (count == 3) {
-            //공격 시뮬레이션 -> ATTACK 갱신
-            ATTACK = 0;
-            int[][] newMap = copyMap();
             int tmp = ENEMY;
+            //0. 맵 복사
+            int[][] copyMap = copyMap();
+            COUNT = 0;
             while (ENEMY > 0) {
-                List<Integer[]> attackedEnemy = new ArrayList<>();
+                //1. 궁수가 죽일 적 정하기
+                List<Integer[]> enemies = new ArrayList<>();
                 for (int i = 0; i < M; i++) {
-                    if (newMap[N][i] == 1) attack(N, i, newMap, attackedEnemy);
+                    if (map[N][i] == 1) {
+                        selectTarget(N, i, enemies, copyMap);
+                    }
                 }
-                kill(newMap, attackedEnemy);
-                move(newMap);
+                //2. 죽이기
+                kill(copyMap, enemies);
+                //3. 적 한 칸 앞으로 옮기기
+                move(copyMap);
             }
-            MAX = Integer.max(MAX, ATTACK);
+            MAX = Integer.max(MAX, COUNT);
             ENEMY = tmp;
             return;
         }
 
         for (int i = start; i < M; i++) {
             map[N][i] = 1;
-            perm(count+1, i+1);
+            game(count+1, i+1);
             map[N][i] = 0;
         }
     }
-    static void attack(int ax, int ay, int[][] map, List<Integer[]> attackedEnemy) {
-        List<Integer[]> candidate = new ArrayList<>();
-        int min = Integer.MAX_VALUE;
-        for (int i = N-1; i >= 0; i--) {
+
+    static int[][] copyMap() {
+        int[][] copy = new int[N+1][M];
+        for (int i = 0; i < N+1; i++) {
+            copy[i] = map[i].clone();
+        }
+        return copy;
+    }
+
+    static void selectTarget(int ax, int ay, List<Integer[]> list, int[][] map) {
+        int minDist = Integer.MAX_VALUE;
+        int minX = Integer.MAX_VALUE;
+        int minY = Integer.MAX_VALUE;
+        for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                int distance = distance(i, j, ax, ay);
-                if (map[i][j] == 1 && distance <= D) {
-                    candidate.add(new Integer[]{i, j, distance});
-                    min = Integer.min(distance, min);
+                if (map[i][j] == 0) continue;
+                int distance = calcDistance(i, j, ax, ay);
+                if (distance <= D && distance < minDist) {
+                    minDist = distance;
+                    minX = i; minY = j;
+                } else if (distance == minDist && j < minY) {
+                    minX = i; minY = j;
                 }
             }
         }
-        for (int i = 0; i < candidate.size(); i++) {
-            Integer[] enemy = candidate.get(i);
-            if (enemy[2] == min) {
-                attackedEnemy.add(new Integer[]{enemy[0], enemy[1]});
-                return;
-            }
+        if (minDist != Integer.MAX_VALUE) {
+            list.add(new Integer[]{minX, minY});
         }
     }
 
-    static void kill(int[][] map, List<Integer[]> attackedEnemy) {
-        for (int i = 0; i < attackedEnemy.size(); i++) {
-            Integer[] enemy = attackedEnemy.get(i);
-            if (map[enemy[0]][enemy[1]] == 1) {
-                map[enemy[0]][enemy[1]] = 0;
-                ATTACK++; ENEMY--;
+    static void kill(int[][] map, List<Integer[]> list) {
+        for (Integer[] enemy : list) {
+            int x = enemy[0]; int y = enemy[1];
+            if (map[x][y] == 1) {
+                map[x][y] = 0;
+                ENEMY--; COUNT++;
             }
         }
     }
@@ -88,25 +107,14 @@ public class B17135_캐슬디펜스 {
             for (int j = 0; j < M; j++) {
                 if (map[i][j] == 1) {
                     if (i == N-1) {
-                        map[i][j] = 0; ENEMY--;
-                    } else {
-                        map[i+1][j] = 1;
+                        ENEMY--;
                         map[i][j] = 0;
+                        continue;
                     }
+                    map[i][j] = 0;
+                    map[i+1][j] = 1;
                 }
             }
         }
-    }
-
-    static int distance(int ex, int ey, int ax, int ay) { //enemy, archer
-        return Math.abs(ex-ax) + Math.abs(ey-ay);
-    }
-
-    static int[][] copyMap() {
-        int[][] copy = new int[N+1][M];
-        for (int i = 0; i < N+1; i++) {
-            copy[i] = map[i].clone();
-        }
-        return copy;
     }
 }
