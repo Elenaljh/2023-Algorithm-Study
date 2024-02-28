@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 public class B16236_아기상어 {
-    static int N, map[][], shark[], count;
+    static int N, map[][], shark[], count, time;
     static final int X = 0, Y = 1, size = 2;
     static int[] dx = new int[]{-1, 1, 0, 0};
     static int[] dy = new int[]{0, 0, -1, 1};
@@ -10,6 +10,7 @@ public class B16236_아기상어 {
         StringTokenizer st;
         N = Integer.parseInt(br.readLine());
         count = 0;
+        time = 0;
         map = new int[N][N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -19,8 +20,12 @@ public class B16236_아기상어 {
             }
         }
 
+        int[] prey;
+        while ((prey = getClosestPrey())!=null) {
+            moveAndEat(prey);
+        }
 
-
+        System.out.println(time);
 
     }
 
@@ -37,7 +42,7 @@ public class B16236_아기상어 {
                 int nx = now[0] + dx[i];
                 int ny = now[1] + dy[i];
                 if (nx >= 0 && nx < N && ny >= 0 && ny < N) {
-                    if (distance[nx][ny] == 0 && map[nx][ny] != 9 &&  map[nx][ny] < shark[size]) {
+                    if (distance[nx][ny] == 0 && map[nx][ny] != 9 &&  map[nx][ny] <= shark[size]) {
                         distance[nx][ny] = distance[now[0]][now[1]] + 1;
                         q.add(new Integer[]{nx, ny});
                     }
@@ -57,27 +62,28 @@ public class B16236_아기상어 {
         int[] closestPrey = null;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (map[i][j] != 0 && map[i][j] < shark[size]) {
+                if (map[i][j] != 9 && map[i][j] != 0 && map[i][j] < shark[size]) {
                     int dist = distance(i, j);
                     if (dist < min) {
                         min = dist;
-                        closestPrey = new int[]{i, j, map[i][j]};
+                        closestPrey = new int[]{i, j, map[i][j], dist};
                     }
                 }
             }
         }
-        if (closestPrey != null) { //x, y, size, dist 반환
-            return new int[]{closestPrey[0], closestPrey[1], closestPrey[2], min};
-        } else {
-            return null;
-        }
+        return closestPrey;
     }
 
     static void moveAndEat(int[] prey) {
-        shark[size] += prey[size];
+        map[shark[X]][shark[Y]] = 0;
         shark[X] = prey[X];
         shark[Y] = prey[Y];
-        //TODO
+        map[shark[X]][shark[Y]] = 9;
+        if (++count == shark[size]) {
+            shark[size]++;
+            count = 0;
+        }
+        time += prey[3];
     }
 
 }
