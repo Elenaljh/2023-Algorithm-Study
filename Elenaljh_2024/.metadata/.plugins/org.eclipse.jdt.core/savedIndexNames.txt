@@ -1,0 +1,2 @@
+INDEX VERSION 1.134+C:\Program Files\Dummy\SSAFY_11\2023-Algorithm-Study\Elenaljh_2024\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
