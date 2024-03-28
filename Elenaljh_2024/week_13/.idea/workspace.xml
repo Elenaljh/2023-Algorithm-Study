@@ -5,24 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddf68738-5961-4cf8-b5d2-14c7a1a7df0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/week_13.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/week_13.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9251_LCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/B9251_LCS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1912_연속합.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B21609_상어중학교.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2193_이친수.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2239_스도쿠.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2239_스도쿠복습.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B2239_스도쿠최적화.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B3055_탈출.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B9205_맥주마시면서걸어가기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/week_13/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/week_13/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/week_13/B9251_LCS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/week_13/B9251_LCS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2eDc3SGTKSJeHDdFazxDbWMdt7M" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,16 +42,37 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.B9251_LCS.executor": "Run",
+    "Application.B1912_연속합.executor": "Run",
+    "Application.B21609_상어중학교.executor": "Run",
+    "Application.B2193_이친수.executor": "Run",
+    "Application.B2239_스도쿠.executor": "Run",
+    "Application.B2239_스도쿠복습.executor": "Run",
+    "Application.B2239_스도쿠최적화.executor": "Run",
+    "Application.B3055_탈출.executor": "Run",
+    "Application.B9251_LCS.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files/Dummy/SSAFY_11/2023-Algorithm-Study/Elenaljh_2024/week_13"
+    "last_opened_file_path": "C:/Program Files/Dummy/SSAFY_11/Spring1/core"
   }
 }]]></component>
   <component name="RunManager">
+    <configuration name="B1912_연속합" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="B1912_연속합" />
+      <module name="week_13" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="B2193_이친수" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="B2193_이친수" />
+      <module name="week_13" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="B9251_LCS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="B9251_LCS" />
       <module name="week_13" />
@@ -49,6 +82,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.B1912_연속합" />
+        <item itemvalue="Application.B2193_이친수" />
         <item itemvalue="Application.B9251_LCS" />
       </list>
     </recent_temporary>
@@ -80,7 +115,25 @@
           <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/B21609_상어중학교.java</url>
+          <line>91</line>
+          <properties class="B21609_상어중학교" method="goDown">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="B3055_탈출.map" />
+        <watch expression="B3055_탈출.Gtime" />
+        <watch expression="B3055_탈출.Wtime" />
+        <watch expression="B3055_탈출.Gq" />
+        <watch expression="B3055_탈출.Wq" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
