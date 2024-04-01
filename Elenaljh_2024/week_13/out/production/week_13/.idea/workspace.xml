@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddf68738-5961-4cf8-b5d2-14c7a1a7df0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/B1912_연속합.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B21609_상어중학교.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2193_이친수.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2239_스도쿠.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2239_스도쿠복습.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/B2239_스도쿠최적화.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/B1920_수찾기.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/week_13/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/week_13/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/week_13/B9251_LCS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/week_13/B9251_LCS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +31,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.B1912_연속합.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B21609_상어중학교.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B2193_이친수.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B2239_스도쿠.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B9251_LCS.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Dummy/SSAFY_11/Spring1/core&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.B1912_연속합.executor": "Run",
+    "Application.B1920_수찾기.executor": "Run",
+    "Application.B21609_상어중학교.executor": "Run",
+    "Application.B2193_이친수.executor": "Run",
+    "Application.B2239_스도쿠.executor": "Run",
+    "Application.B2239_스도쿠복습.executor": "Run",
+    "Application.B2239_스도쿠최적화.executor": "Run",
+    "Application.B3055_탈출.executor": "Run",
+    "Application.B9205_맥주마시면서걸어가기.executor": "Run",
+    "Application.B9251_LCS.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Program Files/Dummy/SSAFY_11/Spring1/core"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="B1912_연속합" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="B1912_연속합" />
